@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+    background: #000;
+}
+
+.menu-btn {
+  display: flex;
+  cursor: pointer;
+}
+.menu-btn h3{
+    color: #fff;
+}
+.menu-btn .icon {
+  margin-left: 5px;
+}
+.menu-btn .icon .icon-lines {
+  height: 3px;
+  background: #fff;
+  width: 25px;
+  margin: 0 0 5px 0;
+  display: block;
+  position: relative;
+  transition: 0.3s all;
+}
+.menu-btn .icon .icon-lines::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+  display: block;
+  transition: 0.3s all;
+}
+.menu-btn:hover .icon-lines::after {
+  width: 100%;
+}
+.menu-btn .icon .icon-lines:nth-child(2)::after {
+  position: absolute;
+  right: 0;
+}
+
+/* Now Style to make Three lines to Cross  */
+.menu-btn.close .icon-lines:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 9px);
+}
+.menu-btn.close .icon-lines:nth-child(2) {
+  transform: translateX(120px);
+  opacity: 0;
+}
+.menu-btn.close .icon-lines:nth-child(3) {
+  transform: rotate(-45deg) translate(3px, -7px);
+}
+
+
+/* header styling */
+.header{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* side menu  */
+.side-menu{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(86,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    width: 255px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    transform: translateX(-255px);
+    transition: 1s all;
+}
+.side-menu ul{
+    list-style: none;
+}
+.side-menu li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 26px;
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+    transition: 0.3s all;
+}
+.side-menu li a:hover{
+    opacity: 0.7;
+}
+.open{
+    transform: translateX(0px);
+}
+.content-move{
+    transform: translateX(255px);
+}
+
+.container{
+    width: 100%;
+    position: relative;
+    transition: 1s all;
+}
+
+.owl-carousel .item{
+    border-right: 1px solid #fff;
+    height: calc(100vh - 70px);
+}
