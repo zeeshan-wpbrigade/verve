@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;1,700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/e332d46df7.js"
+      crossorigin="anonymous"
+    ></script>
 
     <link rel="stylesheet" href="assets/css/owl.carousel.css" />
     <link rel="stylesheet" href="assets/css/owl.theme.green.css" />
@@ -20,22 +24,32 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!-- Main Container satrts -->
     <div class="main-wrapper">
+      <!-- header starts  -->
       <header class="header">
-
+        <!-- 1. Logo  -->
         <div class="logo">
-          <img src="assets/img/logo-verve-ret.png" alt="">
+          <img src="assets/img/logo-verve-ret.png" alt="" />
         </div>
-
-        <div class="menu-btn">
+        <!--2. Menu Btn   -->
+        <button class="menu-btn">
+          Menu
           <div class="icon">
             <span class="icon-lines"></span>
             <span class="icon-lines"></span>
             <span class="icon-lines"></span>
           </div>
+        </button>
+        <!-- Side Btns  -->
+        <div class="side-btns">
+          <a href="#" class="info-btn"><i class="fas fa-info"></i></a>
+          <a id="full-screen-btn"><i class="fas fa-expand"></i></a>
         </div>
       </header>
+      <!-- Header ends  -->
 
+      <!-- Side Menu Starts  -->
       <div class="side-menu">
         <ul>
           <li><a href="">home</a></li>
@@ -44,36 +58,97 @@
           <li><a href="">feedback</a></li>
         </ul>
       </div>
+      <!-- Side Menu Ends  -->
 
+      <!-- Slider Container Starts  -->
       <div class="container">
+        <!-- Owl carousel starts  -->
         <div class="owl-carousel owl-theme">
-          <div class="item item">
-            <img src="assets/img/blue-sea.jpg" alt="" />
+          <!-- slide 1 -->
+          <div
+            class="item"
+            onmouseover="changebg('assets/img/blue-sea.jpg' , 'image')"
+          >
+            <h3>rainy day</h3>
+            <p>urban, vintage</p>
+            <a href="#">read more</a>
           </div>
-          <div class="item">
-            <video src="assets/img/surfing.mp4" autoplay controls></video>
+          <!-- slide 2 -->
+          <div
+            class="item"
+            onmouseover="(changebg('assets/img/surfing.mp4' , 'video'))"
+          >
+            <h3>rainy day</h3>
+            <p>urban, vintage</p>
+            <a href="#">read more</a>
           </div>
-          <div class="item-1 item">
-            <img src="assets/img/yellow-rider.jpg" alt="" />
+          <!-- slide 3 -->
+          <div
+            class="item"
+            onmouseover="changebg('assets/img/yellow-rider.jpg' , 'image')"
+          >
+            <h3>rainy day</h3>
+            <p>urban, vintage</p>
+            <a href="#">read more</a>
           </div>
-          <div class="item">
-            <video src="assets/img/surfing.mp4" autoplay controls></video>
+          <!-- slide 4 -->
+          <div
+            class="item"
+            onmouseover="(changebg('assets/img/surfing.mp4' , 'video'))"
+          >
+            <h3>rainy day</h3>
+            <p>urban, vintage</p>
+            <a href="#">read more</a>
           </div>
-          <div class="item-1 item">
-            <img src="assets/img/the-boat.jpg" alt="" />
+          <!-- slide 5 -->
+          <div
+            class="item"
+            onmouseover="changebg('assets/img/NYC-Traffic.jpg' , 'image')"
+          >
+            <h3>rainy day</h3>
+            <p>urban, vintage</p>
+            <a href="#">read more</a>
           </div>
-          <div class="item">
-            <video src="assets/img/surfing.mp4" autoplay controls></video>
+          <!-- slide 6 -->
+          <div
+            class="item"
+            onmouseover="(changebg('assets/img/surfing.mp4' , 'video'))"
+          >
+            <h3>rainy day</h3>
+            <p>urban, vintage</p>
+            <a href="#">read more</a>
           </div>
-          <div class="item-1 item">
-            <img src="assets/img/old-honda.jpg" alt="" />
+          <!-- slide 7 -->
+          <div
+            class="item"
+            onmouseover="changebg('assets/img/old-honda.jpg' , 'image')"
+          >
+            <h3>rainy day</h3>
+            <p>urban, vintage</p>
+            <a href="#">read more</a>
           </div>
-          <div class="item">
-            <video src="assets/img/surfing.mp4" autoplay controls></video>
+          <!-- slide 8 -->
+          <div
+            class="item"
+            onmouseover="(changebg('assets/img/surfing.mp4' , 'video'))"
+          >
+            <h3>rainy day</h3>
+            <p>urban, vintage</p>
+            <a href="#">read more</a>
           </div>
         </div>
+        <!-- owl Carausel ends  -->
+
+        <!-- Owl carousel Slider background starts -->
+        <div class="slider-background">
+          <img src="assets/img/blue-sea.jpg" alt="Background" class="image" />
+          <video autoplay loop muted class="video" id=""></video>
+        </div>
+        <!-- Owl carousel Slider background ends -->
       </div>
+      <!-- Slider Container Ends  -->
     </div>
+    <!-- Main Container ends -->
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>

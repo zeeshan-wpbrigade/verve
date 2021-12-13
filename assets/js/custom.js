@@ -14,6 +14,7 @@ $(document).ready(function () {
 
   // 4.slider
   $(".owl-carousel").owlCarousel({
+    items: 4,
     loop: true,
     responsiveClass: true,
     dots: false,
@@ -21,22 +22,32 @@ $(document).ready(function () {
       "<img src='assets/img/left.png'>",
       "<img src='assets/img/right.png'>",
     ],
-    responsive: {
-      0: {
-        items: 1,
-        nav: false,
-      },
-      600: {
-        items: 4,
-        nav: true,
-      },
-      1000: {
-        items: 4,
-        nav: true,
-        loop: true,
-      },
-    },
   });
 
+  // 5. Full Screen Mode
+  $("#full-screen-btn").on("click", function () {
+    if (!document.fullscreenElement) {
+      let e = document.querySelector("html");
+      e.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  });
   // Main Document ends
 });
+
+// JS Out from the jQuery Tag
+// 6. on Hover change bg of body
+function changebg(src, type) {
+  if (type === "image") {
+    $(".image").css("display", "block");
+    $(".video").css({ display: "none" });
+    $(".image").attr("src", src);
+  }
+  if (type === "video") {
+    $(".image").css({ display: "none" });
+    $(".video").css({ display: "block" });
+    $(".video").attr("src", src);
+    document.getElementById("backvideo").play();
+  }
+}
