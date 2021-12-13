@@ -8,8 +8,7 @@ body {
   background-color: #e4ecee;
   background-repeat: no-repeat;
   background-position: center;
-}
-
+}     
 .overflow {
   overflow: hidden;
 }
@@ -273,13 +272,17 @@ body {
     position: absolute;
     top: -200px;
   }
-  /* .owl-carousel .item {
-    height: calc(30vh - 0px);
-   }
-  .owl-stage {
+   .owl-stage {
     display: flex;
     flex-direction: column;
     }
+    .owl-carousel  .item{
+      height: 240px;
+    }
+  /* .owl-carousel .item {
+    height: calc(30vh - 0px);
+   }
+ 
     .image {
       position: fixed;
       visibility: hidden;
