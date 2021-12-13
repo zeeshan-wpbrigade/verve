@@ -48,6 +48,6 @@ function changebg(src, type) {
     $(".image").css({ display: "none" });
     $(".video").css({ display: "block" });
     $(".video").attr("src", src);
-    document.getElementById("backvideo").play();
+    document.getElementById("playrest").play();
   }
 }
