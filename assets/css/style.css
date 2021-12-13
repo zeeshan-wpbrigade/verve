@@ -268,11 +268,11 @@ body {
 **********************************************
 *********************************************/
 @media screen and (max-width: 768px) {
-  /* .side-btns {
+  .side-btns {
     position: absolute;
     top: -200px;
   }
-   .owl-stage {
+   /* .owl-stage {
     display: flex;
     flex-direction: column;
     }
@@ -297,5 +297,18 @@ body {
     .item > video {
       display: block;
     } */
+    /* .owl-item.cloned{
+      display: none !important;
+    }
+    .owl-stage{
+      transform:none !important;
+      transition: none !important;
+      width: auto !important;
+    }
+    .owl-item{
+      width: auto !important;
+    } */
+    
 }
+
  
