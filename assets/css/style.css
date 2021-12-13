@@ -21,7 +21,7 @@ body {
 *********************************************/
 .header {
   background: linear-gradient(
-   90deg,
+    90deg,
     rgba(2, 0, 36, 1) 0%,
     rgb(0, 0, 0) 35%,
     rgba(0, 212, 255, 1) 100%
@@ -66,8 +66,8 @@ body {
   align-items: center;
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 19px;
-  transition: 0.3s all;
+  font-size: 20px;
+  transition: 0.5s all;
 }
 /****************************
 ******* Line Styling ********
@@ -88,9 +88,9 @@ body {
   content: "";
   height: 3px;
   width: 0%;
-  background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+  background: linear-gradient(to right, #33ccff 0%, #000000 100%);
   display: block;
-  transition: 0.3s all;
+  transition: 0.5s all;
 }
 .menu-btn:hover .icon-lines::after {
   width: 100%;
@@ -112,7 +112,6 @@ body {
 .menu-btn.close .icon-lines:nth-child(3) {
   transform: rotate(-45deg) translate(3px, -7px);
 }
-
 
 /*********************************************
 **********************************************
@@ -191,7 +190,6 @@ body {
   color: #fff;
 }
 
-
 /******* Owl Nav Styling *******/
 .owl-carousel .owl-prev,
 .owl-carousel .owl-next {
@@ -210,18 +208,18 @@ body {
   right: 2%;
 }
 /**** Owl Item Below btns ****/
-.owl-carousel h3{
+.owl-carousel h3 {
   font-size: 25px;
   transition: 1s all;
   font-weight: 600;
   transform: translateY(20px);
 }
-.owl-carousel p{
+.owl-carousel p {
   margin-top: 6px;
   transition: 1s all;
   transform: translateY(20px);
 }
-.owl-carousel a{
+.owl-carousel a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
@@ -232,16 +230,15 @@ body {
   transition: 1.5s all;
   display: none;
 }
-.owl-carousel .item:hover h3{
+.owl-carousel .item:hover h3 {
   transform: translateY(0px);
 }
-.owl-carousel .item:hover p{
+.owl-carousel .item:hover p {
   transform: translateY(0px);
 }
-.owl-carousel .item:hover a{
+.owl-carousel .item:hover a {
   display: block;
 }
-
 
 /**********************************
 ** Container BG Image and Image  **
@@ -253,13 +250,13 @@ body {
   width: 100%;
   height: 100%;
 }
-.container .image{
+.container .image {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.container .video{
+.container .video {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -271,8 +268,8 @@ body {
 **************** Media Quries ****************
 **********************************************
 *********************************************/
-@media screen and (max-width: 600px) {
-  .side-btns{
+@media screen and (max-width: 768px) {
+  .side-btns {
     position: absolute;
     top: -200px;
   }
@@ -298,4 +295,3 @@ body {
       display: block;
     } */
 }
-
