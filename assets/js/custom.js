@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(".menu-btn").click(function () {
     $(this).toggleClass("close");
   });
-
+ 
   // 2. Move container as just like Side bar moves out
   // 3. Open Side bar with add open class
   $(".menu-btn").click(function () {

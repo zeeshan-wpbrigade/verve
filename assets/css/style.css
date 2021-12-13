@@ -268,7 +268,7 @@ body {
 **********************************************
 *********************************************/
 @media screen and (max-width: 768px) {
-  .side-btns {
+  /* .side-btns {
     position: absolute;
     top: -200px;
   }
@@ -278,7 +278,7 @@ body {
     }
     .owl-carousel  .item{
       height: 240px;
-    }
+    } */
   /* .owl-carousel .item {
     height: calc(30vh - 0px);
    }
@@ -298,3 +298,4 @@ body {
       display: block;
     } */
 }
+ 
