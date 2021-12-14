@@ -13,16 +13,16 @@ $(document).ready(function () {
   });
 
   // 4.slider
-  $(".owl-carousel").owlCarousel({
-    items: 4,
-    loop: true,
-    responsiveClass: true,
-    dots: false,
-    navText: [
-      "<img src='assets/img/left.png'>",
-      "<img src='assets/img/right.png'>",
-    ],
-  });
+  // $(".owl-carousel").owlCarousel({
+  //   items: 4,
+  //   loop: true,
+  //   responsiveClass: true,
+  //   dots: false,
+  //   navText: [
+  //     "<img src='assets/img/left.png'>",
+  //     "<img src='assets/img/right.png'>",
+  //   ],
+  // });
 
   // 5. Full Screen Mode
   $("#full-screen-btn").on("click", function () {
@@ -33,6 +33,53 @@ $(document).ready(function () {
       document.exitFullscreen();
     }
   });
+
+  // Deactive owl slider 
+  $(document).ready(function() {
+    if ( $(window).width() > 767 ) {
+      startCarousel();
+    } else {
+      $('.owl-carousel').addClass('off');
+    }
+  });
+
+  $(window).resize(function() {
+    if ( $(window).width() > 767 ) {
+      startCarousel();
+    } else {
+      stopCarousel();
+    }
+  });
+  function startCarousel(){
+    $(".owl-carousel").owlCarousel({
+       navigation : true, // Show next and prev buttons
+       slideSpeed : 500,
+       margin:10,
+       paginationSpeed : 400,
+       autoplay:true,
+       items : 4,
+       itemsDesktop : false,
+       itemsDesktopSmall : false,
+       itemsTablet: false,
+       itemsMobile : false,
+       loop:true,
+       nav:true,
+       navText: [
+            "<img src='assets/img/left.png'>",
+            "<img src='assets/img/right.png'>",
+          ]
+    });
+  }
+  function stopCarousel() {
+    var owl = $('.owl-carousel');
+    owl.trigger('destroy.owl.carousel');
+    owl.addClass('off');
+  }
+
+
+
+
+
   // Main Document ends
 });
 
