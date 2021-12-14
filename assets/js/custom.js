@@ -9,12 +9,14 @@ $(document).ready(function () {
   $(".menu-btn").click(function () {
     $(".side-menu").toggleClass("open");
     $(".container").toggleClass("content-move");
+    $(".container").toggleClass("overlay");
   });
 
   // 4. Open info tab
   $(".info-btn").click(function () {
     $(".information").toggleClass("open-2");
     $(".container").toggleClass("content-move-2");
+    $(".container").toggleClass("overlay");
   });
  
   // 5. Close info tab by Cross
@@ -73,6 +75,7 @@ $(document).ready(function () {
   $(".container").click(function (e) {
     if (e.target.className !== "information") {
       $(".information").removeClass("open-2");
+
       $(".container").removeClass("content-move-2");
     }
   });
@@ -102,7 +105,7 @@ $(document).ready(function () {
 
 // JS Out from the jQuery Tag
 
-// 8. on Hover change bg of body
+// 8. on Hover change bg of Container
 function changebg(src, type) {
   if (type === "image") {
     $(".image").css("display", "block");
@@ -117,7 +120,7 @@ function changebg(src, type) {
   }
 }
 
-// 9. Second Slider Custom slider wuth JS
+// 9. Second Slider Custom slider with JS
 
 var currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
