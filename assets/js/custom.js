@@ -69,7 +69,7 @@ $(document).ready(function () {
     owl.addClass("off");
   }
 
-  // 7. Hide Information ection on click out side the information conatiner
+  // 7. Hide Information section on click out side the information conatiner
   $(".container").click(function (e) {
     if (e.target.className !== "information") {
       $(".information").removeClass("open-2");
