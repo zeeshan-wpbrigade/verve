@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(".menu-btn").click(function () {
     $(this).toggleClass("close");
   });
- 
+
   // 2. Move container as just like Side bar moves out
   // 3. Open Side bar with add open class
   $(".menu-btn").click(function () {
@@ -12,19 +12,7 @@ $(document).ready(function () {
     $(".container").toggleClass("content-move");
   });
 
-  // 4.slider
-  // $(".owl-carousel").owlCarousel({
-  //   items: 4,
-  //   loop: true,
-  //   responsiveClass: true,
-  //   dots: false,
-  //   navText: [
-  //     "<img src='assets/img/left.png'>",
-  //     "<img src='assets/img/right.png'>",
-  //   ],
-  // });
-
-  // 5. Full Screen Mode
+  // 4. Full Screen Mode
   $("#full-screen-btn").on("click", function () {
     if (!document.fullscreenElement) {
       let e = document.querySelector("html");
@@ -34,51 +22,47 @@ $(document).ready(function () {
     }
   });
 
-  // Deactive owl slider 
-  $(document).ready(function() {
-    if ( $(window).width() > 767 ) {
+  // 5. owl slider
+  $(document).ready(function () {
+    if ($(window).width() > 767) {
       startCarousel();
     } else {
-      $('.owl-carousel').addClass('off');
+      $(".owl-carousel").addClass("off");
     }
   });
 
-  $(window).resize(function() {
-    if ( $(window).width() > 767 ) {
+  $(window).resize(function () {
+    if ($(window).width() > 767) {
       startCarousel();
     } else {
       stopCarousel();
     }
   });
-  function startCarousel(){
+  function startCarousel() {
     $(".owl-carousel").owlCarousel({
-       navigation : true, // Show next and prev buttons
-       slideSpeed : 500,
-       margin:10,
-       paginationSpeed : 400,
-       autoplay:true,
-       items : 4,
-       itemsDesktop : false,
-       itemsDesktopSmall : false,
-       itemsTablet: false,
-       itemsMobile : false,
-       loop:true,
-       nav:true,
-       navText: [
-            "<img src='assets/img/left.png'>",
-            "<img src='assets/img/right.png'>",
-          ]
+      navigation: true, // Show next and prev buttons
+      slideSpeed: 500,
+      margin: 10,
+      paginationSpeed: 400,
+      autoplay: true,
+      items: 4,
+      itemsDesktop: false,
+      itemsDesktopSmall: false,
+      itemsTablet: false,
+      itemsMobile: false,
+      loop: true,
+      nav: true,
+      navText: [
+        "<img src='assets/img/left.png'>",
+        "<img src='assets/img/right.png'>",
+      ],
     });
   }
   function stopCarousel() {
-    var owl = $('.owl-carousel');
-    owl.trigger('destroy.owl.carousel');
-    owl.addClass('off');
+    var owl = $(".owl-carousel");
+    owl.trigger("destroy.owl.carousel");
+    owl.addClass("off");
   }
-
-
-
-
 
   // Main Document ends
 });
