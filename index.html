@@ -53,14 +53,23 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!-- Free Onfo btn starts -->
+    <!-- <div class="footer-btn">
+      <a href="#" class="info-btn info"><i class="fas fa-info"></i></a>
+    </div> -->
+    <!-- Free Onfo btn ends -->
+
     <!-- Main Container satrts -->
     <div class="main-wrapper">
       <!-- header starts  -->
       <header class="header">
         <!-- 1. Logo  -->
         <div class="logo">
-          <a href="">
+          <a href="" class="desktop-logo">
             <img src="assets/img/logo-verve-ret.png" alt="" />
+          </a>
+          <a href="" class="mobile-logo">
+            <img src="assets/img/logo-mobile-ret.png" alt="" />
           </a>
         </div>
         <!--2. Menu Btn   -->
@@ -91,6 +100,135 @@
       </div>
       <!-- Side Menu Ends  -->
 
+      <!-- Information part starts  -->
+      <div class="information">
+        <img
+          src="assets/img/menu-close-icon.png"
+          alt="Close"
+          class="close-info"
+        />
+        <div class="address-sec">
+          <h3>contact information</h3>
+
+          <div class="address mt">
+            <a href="" class="icon"><i class="fas fa-map-marker-alt"></i></a>
+            <a href="" class="text"
+              >River Street, Blue Building 5690-970 New York City</a
+            >
+          </div>
+
+          <div class="phone mt">
+            <a href="" class="icon"><i class="fas fa-phone"></i></a>
+            <a href="" class="text">0000 00000 0000</a>
+          </div>
+
+          <div class="clock mt">
+            <a href="" class="icon"><i class="fas fa-clock"></i></a>
+            <a href="" class="text"
+              >9:30 am to 5:30pm <br />
+              Mon - Fri</a
+            >
+          </div>
+
+          <div class="email-sec mt">
+            <a href="" class="icon"><i class="fas fa-envelope"></i></a>
+            <a href="" class="text">abcd@xyz.com</a>
+          </div>
+        </div>
+
+        <div class="tweet-sec">
+          <h3>latest tweets</h3>
+
+          <div class="owner-detail mt">
+            <img src="assets/img/avatar-twitter.png" alt="" />
+            <div class="text">
+              <h4>Name</h4>
+              <h5>Follow on Twitter</h5>
+            </div>
+          </div>
+
+          <div class="simple-line">
+            <div class="arrows">
+              <img
+                src="assets/img/left.png"
+                onclick="plusSlides(-1)"
+                alt=""
+                class="left"
+              />
+              <img
+                src="assets/img/right.png"
+                onclick="plusSlides(1)"
+                alt=""
+                class="right"
+              />
+            </div>
+            <div class="line"></div>
+            <div class="avatar">
+              <i class="fab fa-twitter"></i>
+            </div>
+          </div>
+
+          <div class="slider-2">
+            <div class="slide">
+              <p>
+                I'm thrilled to announce that 8 months after joining @codeablehq
+                I have 50+ completed projects. Average (and only!!…
+                <a href="" class="site-link">https://t.co/JNAvUEvwIQ</a>
+                <a href="" class="date">over a year ago - </a> Pirenko
+              </p>
+            </div>
+
+            <div class="slide">
+              <p>
+                I'm thrilled to announce that 11.
+                <a href="" class="site-link">https://t.co/JNAvUEvwIQ</a>
+                <a href="" class="date">over a year ago - </a> Pirenko
+              </p>
+            </div>
+
+            <div class="slide">
+              <p>
+                I'm thrilled…
+                <a href="" class="site-link">https://t.co/JNAvUEvwIQ</a>
+                <a href="" class="date">over a year ago - </a> Pirenko
+              </p>
+            </div>
+          </div>
+
+          <div class="intagram-feed">
+            <h3>Instagram feed</h3>
+
+            <div class="img-gallery">
+              <img
+                src="assets/img/2125466327421548454_7146986080low.jpg"
+                alt=""
+              />
+              <img
+                src="assets/img/2125466618749263602_7146986080low.jpg"
+                alt=""
+              />
+              <img
+                src="assets/img/2125470697097677785_7146986080low.jpg"
+                alt=""
+              />
+              <img
+                src="assets/img/2125466894189381113_7146986080low.jpg"
+                alt=""
+              />
+              <img
+                src="assets/img/2125470824562545260_7146986080low.jpg"
+                alt=""
+              />
+              <img
+                src="assets/img/2125470930669957015_7146986080low.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Information part ends  -->
+
       <!-- Slider Container Starts  -->
       <div class="container">
         <!-- Owl carousel starts  -->
@@ -110,7 +248,7 @@
             class="item"
             onmouseover="(changebg('assets/img/surfing.mp4' , 'video'))"
           >
-            <video src="assets/img/surfing.mp4" autoplay controls></video>
+            <video src="assets/img/surfing.mp4"></video>
             <h3>rainy day</h3>
             <p>urban, vintage</p>
             <a href="#">read more</a>
@@ -130,7 +268,7 @@
             class="item"
             onmouseover="(changebg('assets/img/surfing.mp4' , 'video'))"
           >
-            <video src="assets/img/surfing.mp4" autoplay controls></video>
+            <video src="assets/img/surfing.mp4"></video>
             <h3>rainy day</h3>
             <p>urban, vintage</p>
             <a href="#">read more</a>
@@ -150,7 +288,7 @@
             class="item"
             onmouseover="(changebg('assets/img/surfing.mp4' , 'video'))"
           >
-            <video src="assets/img/surfing.mp4" autoplay controls></video>
+            <video src="assets/img/surfing.mp4"></video>
             <h3>rainy day</h3>
             <p>urban, vintage</p>
             <a href="#">read more</a>
@@ -170,7 +308,7 @@
             class="item"
             onmouseover="(changebg('assets/img/surfing.mp4' , 'video'))"
           >
-            <video src="assets/img/surfing.mp4" autoplay controls></video>
+            <video src="assets/img/surfing.mp4"></video>
             <h3>rainy day</h3>
             <p>urban, vintage</p>
             <a href="#">read more</a>

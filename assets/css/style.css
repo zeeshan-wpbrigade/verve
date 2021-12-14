@@ -5,12 +5,21 @@
 }
 body {
   font-family: "Titillium Web", sans-serif;
-  background-color: #e4ecee;
-  background-repeat: no-repeat;
-  background-position: center;
+ position: relative;
 }
-.overflow {
-  overflow: hidden;
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888 transparent;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /*********************************************
@@ -29,10 +38,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 12;
 }
-.header .logo img {
+.header .desktop-logo {
+  display: block;
+}
+.header .mobile-logo {
+  display: none;
+}
+.header .desktop-logo img {
   height: 70px;
+}
+.header .mobile-logo img {
+  width: 120px;
 }
 .header .side-btns {
   display: flex;
@@ -49,7 +67,7 @@ body {
   transition: 0.3s all;
 }
 .header .side-btns a:hover {
-  color: #3eb5de;
+  opacity: 0.7;
 }
 /****************************
 ********** Menu btn**********
@@ -118,12 +136,7 @@ body {
 **********************************************
 *********************************************/
 .side-menu {
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgb(0, 0, 0) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: #000;
   width: 255px;
   height: 100%;
   display: flex;
@@ -158,6 +171,230 @@ body {
 }
 .content-move {
   transform: translateX(255px);
+}
+
+/*********************************************
+**********************************************
+************* Information bar Menu ***********
+**********************************************
+*********************************************/
+.information {
+  background: black;
+  color: #fff;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 86px;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 10;
+  transform: translateX(-320px);
+  transition: 1s all;
+  padding: 0px 20px 30px 20px;
+}
+.open-2 {
+  transform: translateX(0px);
+}
+.content-move-2 {
+  transform: translateX(320px);
+}
+.information .close-info {
+  width: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.information .close-info:hover {
+  opacity: 0.7;
+}
+/**************************************
+******* Address section starts  *******
+**************************************/
+.information .address-sec {
+  padding: 50px 30px 20px 0;
+}
+.mt {
+  margin-top: 10px;
+}
+
+.information .address-sec h3 {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(27, 25, 25);
+  padding: 10px 0;
+}
+.information .address-sec .icon:hover {
+  text-decoration: none !important;
+}
+.information .address-sec .address {
+  display: flex;
+}
+.information .address-sec .address a {
+  color: #fff;
+  text-decoration: none;
+}
+.information .address-sec .text {
+  margin-left: 15px;
+}
+.information .address-sec .address:hover {
+  text-decoration: underline;
+}
+.information .address-sec .phone {
+  display: flex;
+}
+.information .address-sec .phone a {
+  color: #fff;
+  text-decoration: none;
+}
+.information .address-sec .phone:hover {
+  text-decoration: underline;
+}
+.information .clock {
+  display: flex;
+}
+.information .address-sec .clock:hover {
+  text-decoration: underline;
+}
+.information .clock a {
+  text-decoration: none;
+  color: #fff;
+}
+.information .email-sec {
+  display: flex;
+}
+.information .address-sec .email-sec:hover {
+  text-decoration: underline;
+}
+.information .email-sec a {
+  text-decoration: none;
+  color: #fff;
+}
+/**************************************
+******* Tweeter section starts  *******
+**************************************/
+.tweet-sec {
+  padding: 50px 0 20px 0;
+}
+.tweet-sec h3 {
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(27, 25, 25);
+  padding: 10px 0;
+}
+.tweet-sec .owner-detail {
+  display: flex;
+}
+.tweet-sec .owner-detail img {
+  max-height: 50px;
+}
+.tweet-sec .owner-detail .text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.tweet-sec .owner-detail .text h4 {
+  line-height: 16px;
+  font-size: 18px;
+}
+.tweet-sec .owner-detail .text h5 {
+  font-weight: lighter;
+}
+
+.tweet-sec .simple-line {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
+}
+.tweet-sec .simple-line .arrows {
+  display: flex;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.tweet-sec .simple-line .arrows .left:hover {
+  opacity: 0.7;
+}
+.tweet-sec .simple-line .arrows .right:hover {
+  opacity: 0.7;
+}
+.tweet-sec .simple-line .arrows img {
+  width: 7px;
+}
+.tweet-sec .simple-line .arrows .right {
+  margin-left: 10px;
+}
+.tweet-sec .simple-line .avatar {
+  margin-left: 5px;
+}
+.tweet-sec .simple-line .line {
+  border-bottom: 1px solid rgb(27, 25, 25);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweet-sec .slider-2 .slide p {
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 22px;
+}
+.tweet-sec .slider-2 .slide p .site-link {
+  color: #fff;
+  display: block;
+  font-size: 15px;
+  text-decoration: none;
+}
+.tweet-sec .slider-2 .slide p .site-link:hover {
+  text-decoration: underline;
+}
+.tweet-sec .slider-2 .slide p .date {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+.tweet-sec .slider-2 .slide {
+  display: none;
+}
+
+/**************************************
+****** Intagram section starts  *******
+**************************************/
+.intagram-feed {
+  padding: 50px 0 20px 0;
+}
+.intagram-feed h3 {
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(27, 25, 25);
+  padding: 10px 0;
+}
+.intagram-feed .img-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 15px;
+}
+.intagram-feed .img-gallery img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s all;
+}
+.intagram-feed .img-gallery img:hover {
+  box-shadow: 0 0 5px #fff;
+  z-index: 1;
+  cursor: pointer;
 }
 
 /*********************************************
@@ -217,7 +454,7 @@ body {
   transform: translateY(-50%);
   color: #fff !important;
   background: none !important;
-  z-index: 9999;
+  z-index: 10;
 }
 .owl-carousel .owl-prev {
   margin-top: 5px;
@@ -283,12 +520,41 @@ body {
   object-fit: cover;
 }
 
+/**********************************
+*********** Footer Btn ************
+**********************************/
+.footer-btn{
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  z-index: 9999;
+
+}
+.footer-btn a{
+  color: #fff;
+  background: transparent;
+  color: #ffffff;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s all;
+  display: none;
+}
+.footer-btn a:hover {
+  color: #3eb5de;
+}
+
 /*********************************************
 **********************************************
 **************** Media Quries ****************
 **********************************************
 *********************************************/
 @media screen and (max-width: 768px) {
+  .header {
+    position: sticky;
+    top: 0;
+  }
   .side-btns {
     position: absolute;
     top: -200px;
@@ -300,7 +566,7 @@ body {
 
   .owl-carousel .item {
     height: 250px;
-    border-bottom: 1px solid #fff;
+    /* border-bottom: 1px solid #fff; */
     border-right: 0;
   }
   .owl-carousel.off {
@@ -317,12 +583,24 @@ body {
     display: block;
   }
   .owl-carousel a {
-    display: block;
+    display: none;
   }
   .owl-carousel h3 {
     transform: translateY(0px);
   }
   .owl-carousel p {
     transform: translateY(0px);
+  }
+  .footer-btn a {
+    display: block;
+  }
+  .header .desktop-logo {
+    display: none;
+  }
+  .header .mobile-logo {
+    display: block;
+  }
+  .information {
+    top: 64px;
   }
 }
